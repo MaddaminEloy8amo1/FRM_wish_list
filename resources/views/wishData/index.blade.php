@@ -5,7 +5,7 @@
         <div class="col-4">
             <a class="btn btn-primary" href="/"> Back</a>
         </div>
-        <div class="col-4">
+        <div class="col-4 text-center">
             <h2>Xmas Wishlist</h2>
         </div>
         <div class="col-4">
@@ -57,8 +57,9 @@
                 <hr class="w-75">
             </div>
         @endforeach
-    </div>
 
-    {!! $wishData->links() !!}
+        {!! $wishData->links() !!}
+
+    </div>
 
 @endsection

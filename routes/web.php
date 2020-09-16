@@ -13,3 +13,7 @@
 
 Route::get('/', 'WishDataController@welcome');
 Route::resource('/wishData','WishDataController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

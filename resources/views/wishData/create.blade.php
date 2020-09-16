@@ -6,7 +6,7 @@
             <div class="col-4">
                 <a class="btn btn-primary" href="{{ route('wishData.index') }}"> Back</a>
             </div>
-            <div class="col-8">
+            <div class="col-4 text-center">
                 <h2>Add New Wish</h2>
             </div>
         </div>

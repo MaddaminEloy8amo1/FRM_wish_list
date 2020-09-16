@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class WishDataController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +19,10 @@ class WishDataController extends Controller
 
         return view('wishData.index',compact('wishData'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function __construct(){
+        $this->middleware('auth', ['except' => ['index', 'welcome', 'show']]);
     }
 
     /**
@@ -37,6 +42,7 @@ class WishDataController extends Controller
      */
     public function create()
     {
+        $this->middleware('auth');
         return view('wishData.create');
     }
 

@@ -106,6 +106,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hK35SqTbUbxX7c8Fygvf6oCpJt" />
@@ -116,7 +117,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../xampp/htdocs/xbox_blog" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -151,6 +152,7 @@
       <workItem from="1600114517110" duration="3724000" />
       <workItem from="1600175841005" duration="2457000" />
       <workItem from="1600179226152" duration="3521000" />
+      <workItem from="1600264577502" duration="7563000" />
     </task>
     <servers />
   </component>
@@ -158,13 +160,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600083589620">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1600274620555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600083589620" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599746383566">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600274620555" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600277153981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599746383566" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600277153981" />
   </component>
 </project>
