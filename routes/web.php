@@ -12,8 +12,12 @@
 */
 
 Route::get('/', 'WishDataController@welcome');
-Route::resource('/wishData','WishDataController');
+Route::get('/admin', 'WishDataController@admin');
+Route::get('/userswish', 'WishDataController@adminpanel');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('/wishData', 'WishDataController');
+});
+

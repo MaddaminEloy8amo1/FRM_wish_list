@@ -8,6 +8,6 @@ class WishData extends Model
 {
     protected $table = 'wish_data';
     protected $fillable = [
-        'img', 'name', 'description', 'price', 'link',
+        'img', 'name', 'description', 'price', 'link', 'user_id',
     ];
 }

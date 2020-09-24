@@ -11,27 +11,31 @@
             </div>
         </div>
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        <div class="container">
+            @if (session('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-error" role="alert">
+                    {{ session('error') }}
+                </div>
+            @endif
+        </div>
 
-        <form action="{{ route('wishData.update',$wishData->id) }}" method="POST">
+        <form action="{{ route('wishData.update',$wishData->id) }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Image URL:</strong>
-                        <input type="text" name="img" value="{{ $wishData->img }}" class="form-control"
-                               placeholder="Image URL">
+                        <strong>Image:</strong>
+                        <input type="file" name="img" value="{{ $wishData->image }}" />
+                        <img src="{{ URL::to('/') }}/images/{{ $wishData->img }}" class="img-thumbnail" width="200" />
+                        <input type="hidden" name="hidden_image" value="{{ $wishData->img }}" />
+                        <span class="text-danger">{{ $errors->first('img') }}</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -39,6 +43,7 @@
                         <strong>Name:</strong>
                         <input type="text" name="name" value="{{ $wishData->name }}" class="form-control"
                                placeholder="Name">
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -46,6 +51,7 @@
                         <strong>Description:</strong>
                         <input type="text" name="description" value="{{ $wishData->description }}" class="form-control"
                                placeholder="Description">
+                        <span class="text-danger">{{ $errors->first('description') }}</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -53,6 +59,7 @@
                         <strong>Price:</strong>
                         <input type="number" class="form-control" name="price" value="{{ $wishData->price }}"
                                placeholder="Price">
+                        <span class="text-danger">{{ $errors->first('price') }}</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -60,6 +67,7 @@
                         <strong>Product link:</strong>
                         <input type="text" class="form-control" name="link" value="{{ $wishData->link }}"
                                placeholder="Product link">
+                        <span class="text-danger">{{ $errors->first('link') }}</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
